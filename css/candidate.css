@@ -1,0 +1,44 @@
+.btn-sm{padding:0px;}.owl-carousel .owl-item .call-skills img{padding:0px;height:30px;width:65px;}.call-skills img{padding:0px;height:30px;width:70px;}
+.call-skills .userimgs img{ width: 93%;height: 200px}
+.progress-outer{ 
+  background: #f5f2f2;
+  padding: 5px;
+  margin: 3px 0;
+}
+.progress{
+    position: relative;
+height: 20px;
+margin: 0;
+overflow: visible;
+background: #18059e;
+padding-left: 0px;
+}
+.progress .progress-bar{
+    border-radius: 2px;
+}
+
+.progress-bar-striped {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(42, 39, 39, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+background-size: 1rem 1rem;
+background-color: #958df7;
+}
+.progress .progress-value{
+right: 2%;
+position: absolute;
+font-size: 13px;
+font-weight: bold;
+color: #e5e5e5;
+letter-spacing: 0px;
+line-height: 20px;
+text-align: right;
+}
+.progress-bar.active{
+    animation: reverse progress-bar-stripes 1s linear infinite, animate-positive 2s;
+}
+
+@-webkit-keyframes animate-positive{
+    0% { width: 0%; }
+}
+@keyframes animate-positive {
+    0% { width: 0%; }
+}

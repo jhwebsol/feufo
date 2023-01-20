@@ -1,0 +1,363 @@
+.login-page {
+    background: url(../images/bg1.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.text-white{
+	color:#fff!important;
+}
+.uma-login {
+    background: #0086b2;
+    margin: 50px 0px;
+    border-radius: 10px;
+}
+
+.login-box-body {
+    border-radius: 10px 0px 0px 10px;
+    background: #feec44
+}
+.mt-20{
+	margin-top: 20px;
+}
+.br-1 {
+    border-right: 2px solid #000;
+}
+
+.bb-2 {
+    border-bottom: 2px solid #ccc;
+    padding: 5px 0px;
+    margin: 5px 0px 20px 0px;
+}
+
+.staff-login img {
+    margin: 5px auto
+}
+
+.btn-custom1 {
+    background: #fff;
+    color: #000;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+.box-header {
+    border-bottom: 1px solid #ccc;
+}
+
+.btn-custom2 {
+    background: #008d4d;
+    color: #fff;
+    font-weight: 600;
+}
+
+.btn-custom2:hover {
+    background: #00a65a;
+    color: #fff;
+}
+
+
+/* pricing */
+
+.jh-table .table thead tr th {
+    background: #fff;
+    color: #1e91cf;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 2px solid #ccc;
+}
+
+.jh-table .table thead tr td {
+    background: #fff;
+    color: #1e91cf;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 2px solid #ccc;
+}
+
+.jh-table .table tbody tr td {
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px;
+}
+
+
+/*.btn{
+	color:#fff;
+	font-size: 16px;
+	text-transform: capitalize
+}*/
+
+.box {
+    border: 1px solid #e3e6f0;
+    border-top-width: 1px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(238, 14, NaN, 1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(238, 14, NaN, 1);
+    box-shadow: 0px 0px 5px 0px rgba(238, 14, NaN, 1);
+}
+
+.jh-table-order .table tbody tr td {
+    color: #000;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+}
+
+.jh-table-order .table tbody tr th {
+    color: #00add7;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+}
+
+.ui-draggable,
+.ui-droppable {
+    background-position: top;
+}
+
+
+/* ........... Payroll .......... */
+
+.jh-salary .table thead tr th {
+    background: #fff;
+    color: #1e91cf;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 2px solid #ccc;
+}
+
+.jh-salary .table tbody tr td {
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.jh-salary .table tbody tr td .btn {
+    padding: 4px 8px;
+    font-size: 14px;
+    font-weight: 400
+}
+
+.table > tbody > tr > td.high {
+    background: #ff0000;
+    color: #fff;
+}
+
+.table > tbody > tr > td.medium {
+    background: #00c0ef;
+    color: #fff;
+}
+
+.table > tbody > tr > td.low {
+    background: #f39c12;
+    color: #fff;
+}
+
+.buttons-copy {
+    background: transparent;
+    border: 1px solid #00c0ef;
+    color: #000;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.buttons-excel {
+    background: transparent;
+    border: 1px solid #dd4b39;
+    color: #000;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.buttons-csv {
+    background: transparent;
+    border: 1px solid #3c8dbc;
+    color: #000;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.buttons-pdf {
+    background: transparent;
+    border: 1px solid red;
+    color: #000;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.buttons-print {
+    background: transparent;
+    border: 1px solid green;
+    color: #000;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.jh-paysleep img {
+    margin: 2px auto;
+}
+
+.btn-group a button {
+    border-radius: 0px;
+}
+
+.note-editor.note-frame .note-editing-area .note-editable[contenteditable="false"] {
+    background-color: #fff !important;
+}
+
+label {
+    color: #3c8dbc;
+    font-family: calibri;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top:10px;
+}
+
+.jh-task .table thead tr th {}
+
+.jh-task .table tbody tr td {
+    vertical-align: middle;
+}
+
+.nav-profile li {
+    background: #3c8dbc;
+    border-right: 1px solid #fff
+}
+
+.nav-profile li a:hover {
+    background: #00a65a !important;
+    color: #fff;
+}
+
+.nav-profile li a {
+    color: #fff;
+    font-size: 16px;
+}
+
+.nav-profile .active-nav {
+    background: #00a65a;
+}
+
+.bdr {
+    border: 1px solid #ccc;
+}
+
+.custmernav-profile .nav li {
+    background-color: #01903E;
+    color: #fff;
+    font-size: 16px;
+}
+
+.custmernav-profile .custmernav .active-nav {
+    background-color: #0086B2;
+    color: #fff;
+    font-size: 16px;
+}
+
+.custmernav-profile .nav > li > a:hover,
+.nav > li > a:active,
+.nav > li > a:focus {
+    background-color: #0086B2;
+    color: #fff;
+    font-size: 16px;
+}
+
+.custmernav-profile .nav li a {
+    color: #fff !important;
+    font-size: 16px;
+    font-weight: 600
+}
+.aply {
+    background-color: #89ab20;
+    color: #fff;
+    min-height: 20px;
+    padding: 4px;
+}
+.aply_now .aply { 
+    color: #fff!important; 
+	text-decoration:none;
+	padding-top:0px;
+	font-weight:700;
+	
+}
+.aply_now {
+    background-image: url(../../img/apply.png);
+    background-repeat: no-repeat;
+    background-position: left 6px;
+    padding-left: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    line-height: 31px;
+}
+.text-capitalize{
+	text-transform:capitalize;
+}
+
+.dppicbrowse {
+    width: 128px;
+    height: 128px;
+    font-size: 10px;
+    text-align: center; 
+    border: 1px solid #ccc;
+    background-image: url(../../img/userpicbg.png);
+    background-position: center;
+    overflow:hidden;
+    background-repeat: no-repeat;
+}
+.dppicbrowse img{
+    width: 90%;
+  margin:0 auto;
+    height: auto;    
+}
+.dpaadharbrowse {
+    width: 230px;
+    height: 160px;
+    font-size: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    overflow:hidden; 
+}
+.dpaadharbrowse img{
+    width: 90%;
+    margin:0 auto;
+    height: auto;    
+}
+.dppanbrowse{
+    width: 230px;
+    height: 160px;
+    font-size: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    overflow:hidden; 
+}
+.dppanbrowse img{
+    width: 90%;
+    margin:0 auto;
+    height: auto;    
+}
+.dppicbrowse p, .dpaadharbrowse p, .dppanbrowse p{
+  color:#000;
+  font-size:14px;
+}

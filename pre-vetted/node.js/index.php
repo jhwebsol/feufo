@@ -1,0 +1,191 @@
+<?php include("db_config.php"); 
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <?php include("css.php");?>
+    <link href="../../css/candidate.css" rel="stylesheet">
+    <link href="../../css/box.css" rel="stylesheet">
+    
+</head>
+<?php $current_url=$_SERVER['REQUEST_URI']; 
+$csub_id= explode("/", $current_url);
+$csubs= $csub_id[1];
+    $sqlct=mysqli_query($conn,"select * from category");
+     while ($resus=mysqli_fetch_array($sqlct)) {
+        if(strtolower(str_replace(" ", "-", $resus["cat_name"])) == $csubs){
+               $cid=$resus['id'];
+        }
+    }
+$csub= $csub_id[2];
+    $findid = (mysqli_query($conn, "SELECT * FROM sub_category where category_id='".$cid."'"));
+    while ($res2=mysqli_fetch_array($findid)){
+        if(strtolower(str_replace(" ", "-", $res2["sub_category_name"])) ==  $csub){
+            $idd = $res2["id"];
+        }
+    } 
+?>
+<?php //$id=$_POST["id"];
+ $sql_prdd="select sub_category.sub_category_name,category.cat_name,employee_details.* from employee_details join category on employee_details.cat_id=category.id join sub_category on employee_details.subcat_id=sub_category.id where employee_details.subcat_id='$idd'";
+ $result_prdd = mysqli_query($conn, $sql_prdd);
+$res_prdd= mysqli_fetch_array($result_prdd); ?>
+<body>
+    <div class="page-wrapper">
+        <?php include("header.php");?>
+        <section class="page-title">
+            <div class="auto-container">
+                <div class="title-outer">
+                    <ul class="page-breadcrumb">
+                        <li><a href="https://www.feufo.com/index.php">Home</a></li>
+                        <li>Talent</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="ls-section">
+            <div class="auto-container">
+                <div class="filters-backdrop"></div>
+                <div class="row">
+                    <div class="filters-column col-lg-3 col-md-3 col-sm-3">
+                        <ul class="accordion-box">
+          <li class="accordion block active-block">
+            <div class="acc-btn">Filter<span class="icon flaticon-add"></span></div>
+            <div class="acc-content">
+              <div class="content">
+                 <div class="row filters-outer">
+                               
+                                <div class="col-md-12 filter-block">
+                                    <h4>Skills</h4>
+                                    <div class="form-group">
+                                        <select class="chosen-select" mulutiple>
+                                            <option>Select Skills</option>
+                                            <option>Core Java</option>
+                                            <option>Git</option>
+                                            <option>Jenkins</option>
+                                            <option>Kubernet</option>
+                                            <option>Postman</option>
+                                            <option>Selenium</option>
+                                        </select>
+                                        <span class="icon flaticon-briefcase"></span>
+                                    </div>
+                                </div>
+                                  <div class="col-md-12 filter-block">
+                                    <h4>Salary</h4>
+                                    <div class="form-group">
+                                        <select class="chosen-select" mulutiple>
+                                            <option>Select Salary</option>
+                                            <option>$500 /month</option>
+                                            <option>$1000 /month</option>
+                                            <option>$1500 /month</option>
+                                            <option>$2500 /month</option>
+                                            <option>$3500 /month</option>
+                                            <option>More $ 4000</option> 
+                                        </select>
+                                        <span class="icon flaticon-money"></span>
+                                    </div>
+                                </div>
+                               
+                               
+                                 <div class="col-md-12 filter-block">
+                                    <h4>Location</h4>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control">
+                                        <span class="icon flaticon-map"></span>
+                                    </div>
+                                </div>
+                                 <div class="col-md-12 filter-block">
+                                    <h4>Experience Level</h4>
+                                    <div class="form-group">
+                                        <select class="chosen-select">
+                                            <option>Select Experience Level</option>
+                                            <option>All</option>
+                                            <option>0-1 Year </option>
+                                            <option>1-3 Years </option>
+                                            <option>3-5 Years </option>
+                                            <option>More Than 5 Years </option>
+                                        </select>
+                                        <span class="icon flaticon-briefcase"></span>
+                                    </div>
+                                </div>
+
+                                  <div class="col-md-12 filter-block">
+                                    <h4>Time Zone</h4>
+                                    <div class="form-group">
+                                        <select class="chosen-select" mulutiple>
+                                            <option>Select Time Zone</option>
+                                            <option>EST</option>
+                                            <option>MST</option> 
+                                        </select>
+                                        <span class="icon flaticon-money"></span>
+                                    </div>
+                                </div>
+                              
+                               <!--   <div class="col-md-12 filter-block">
+                                    <h4>Category</h4>
+                                    <div class="form-group">
+                                        <select class="chosen-select">
+                                            <option>Select Category</option>
+                                            <option>Pre-Vetted</option>
+                                            <option>Top Companies</option>
+                                            <option>Top Universities</option>
+                                        </select>
+                                        <span class="icon flaticon-briefcase"></span>
+                                    </div>
+                                </div>
+                                -->
+                                <div class="col-md-12 filter-block"> 
+                                    <div class="form-group">
+                                        <a href="#" class="btn btn-primary btn-block"><span class="btn-title">Search</span></a>
+                                    </div>
+                                </div>
+                            </div>
+              </div>
+            </div>
+          </li>
+ 
+        </ul>
+         
+                    </div>
+                    <div class="content-column col-lg-9 col-md-9 col-sm-12">
+                        <div class="ls-outer">
+                            <div class="row">
+                                <?php //$id=$_POST["id"];
+                                 $sql_prdd="select sub_category.sub_category_name,category.cat_name,employee_details.* from employee_details join category on employee_details.cat_id=category.id join sub_category on employee_details.subcat_id=sub_category.id where employee_details.subcat_id='$idd'";
+                                 $result_prdd = mysqli_query($conn, $sql_prdd);
+                                while($res_prdd= mysqli_fetch_array($result_prdd)){
+                                 $cate = strtolower(str_replace(" ", "-", $res_prdd['cat_name']));
+                                 $scate = strtolower(str_replace(" ", "-", $res_prdd['sub_category_name']));  
+                                 $emp_name = strtolower(str_replace(" ", "-", $res_prdd['emp_name']));    
+                                 ?>
+                                <div class="job-block-four col-lg-4 col-md-4 col-sm-12"> 
+                                        <a href="https://www.feufo.com/<?= "$cate/$scate/$emp_name" ?>">
+                                            <div class="propbox" style="background-image: url(https://www.feufo.com/admin/emp/<?php echo $res_prdd['image']; ?>);">
+                                            <div class="gradient">
+                                                <div class="icons"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                                                <div class="icons1"><i class="icon flaticon-money" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="content">
+                                                    <h2 class="text-capitalize"><?= $res_prdd['emp_name'];?></h2>
+                                                    <p class="text-capitalize"><?= $res_prdd['job_title'];?></p>
+                                                    <p class="details"><?php $string = html_entity_decode($res_prdd['desp']); echo substr($string, 0, 100) .((strlen($string) > 100) ? '' : ''); ?>...</p>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                      </a> 
+                                    </div><?php } ?>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <?php include("footer.php");?>
+    </div>
+    <?php include("js.php");?>
+</body>
+
+</html>

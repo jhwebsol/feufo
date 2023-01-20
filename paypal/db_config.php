@@ -1,0 +1,1 @@
+<?php $conn=mysqli_connect('103.21.58.4:3306','dezign_user','3deGl21&','dmania_hyd'); ?>
